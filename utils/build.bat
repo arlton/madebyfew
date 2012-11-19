@@ -11,6 +11,9 @@ rem Direct copying img and fonts directories
 xcopy ..\img ..\dist\img /e /q /i
 xcopy ..\fonts ..\dist\fonts /e /q /i
 
+echo Copying .htaccess file
+copy /b ..\.htaccess ..\dist\.htaccess
+
 echo Minifying index.html
 java -jar htmlcompressor.jar -c utf-8 --compress-js --compress-css -o ..\dist\index.html ..\index.html
 
