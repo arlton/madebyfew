@@ -13,8 +13,15 @@ cp -R ../fonts/ ../dist/fonts/
 echo "Copying .htaccess file"
 cp ../.htaccess ../dist/.htaccess
 
+echo "Copying index.html"
+cp ../index.html ../dist/index.html
+
+echo "Updating index.html script references"
+sed -i 's/<script type\=\"text\/javascript\" src\=\"js\/css3-mediaqueries\.js\"><\/script>//g' ../dist/index.html
+sed -i 's/<script type\=\"text\/javascript\" src\=\"js\/jquery\.js\"><\/script>//g' ../dist/index.html
+
 echo "Minifying index.html"
-java -jar htmlcompressor.jar -c utf-8 --compress-js --compress-css -o ../dist/index.html ../index.html
+java -jar htmlcompressor.jar -c utf-8 --compress-js --compress-css -o ../dist/index.html ../dist/index.html
 
 while [ "$1" != "" ]; do
     case $1 in
@@ -29,6 +36,4 @@ echo "Minifying CSS"
 java -jar yuicompressor.jar --type css --charset utf-8 -o ../dist/css/style.css ../css/style.css
 
 echo "Minifying JS"
-java -jar compiler.jar --js ../js/jquery.js --js_output_file ../dist/js/jquery.js
-java -jar compiler.jar --js ../js/bootstrap-carousel.js ../js/bootstrap-modal.js ../js/bootstrap-tooltip.js ../js/jquery.scrollTo.min.js ../js/waypoints.min.js ../js/jquery.fitvids.js ../js/general.js --js_output_file ../dist/js/combined-scripts.js
-java -jar compiler.jar --js ../js/css3-mediaqueries.js --js_output_file ../dist/js/css3-mediaqueries.js
+java -jar compiler.jar --js ../js/css3-mediaqueries.js ../js/jquery.js ../js/bootstrap-carousel.js ../js/bootstrap-modal.js ../js/bootstrap-tooltip.js ../js/jquery.scrollTo.min.js ../js/waypoints.min.js ../js/jquery.fitvids.js ../js/general.js --js_output_file ../dist/js/combined-scripts.js
