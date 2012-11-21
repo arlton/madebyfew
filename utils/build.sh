@@ -8,6 +8,7 @@ mkdir ../dist
 mkdir ../dist/js
 mkdir ../dist/css
 cp -R ../img/ ../dist/img/
+cp -R ../fonts/ ../dist/fonts/
 
 echo "Copying .htaccess file"
 cp ../.htaccess ../dist/.htaccess
