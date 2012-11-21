@@ -504,10 +504,6 @@ nav#main-nav a.register-ipad {
   color: #fff;
   padding: 10px 15px 18px;
 }
-#arrow-wrapper #arrow .icon-down-open-big {
-	background-image:none;
-}
-
 #quotes {
   padding: 100px 0 20px 0;
   font-weight: 200;
@@ -852,7 +848,7 @@ nav#main-nav a.register-ipad {
   box-shadow: rgba(0, 0, 0, 0.4) 0 0 10px;
 }
 #last-year-speakers .speaker-info {
-  width: 500px;
+  width: 438px;
   display: block;
   margin: 0 auto 30px auto;
   background: #273138;
