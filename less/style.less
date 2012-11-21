@@ -47,6 +47,8 @@ table {
     border-spacing: 0;
 }
 
+@charset "UTF-8";
+
 @font-face {
   font-family: 'fontello';
   src: url("../fonts/fontello.eot");
@@ -54,8 +56,8 @@ table {
   font-weight: normal;
   font-style: normal;
 }
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
+[class^="iconnew-"]:before,
+[class*=" iconnew-"]:before {
   font-family: 'fontello';
   font-style: normal;
   font-weight: normal;
@@ -75,11 +77,11 @@ table {
 /* font-size: 120%; */
 }
 
-.icon-down-open-big:before { content: '\e764'; } /* '' */
-.icon-facebook-rect-1:before { content: '\e800'; } /* '' */
-.icon-twitter-bird:before { content: '\f303'; } /* '' */
-.icon-vimeo:before { content: '\f30f'; } /* '' */
-.icon-globe:before { content: '𝌍'; } /* '\1d30d' */
+.iconnew-down-open-big:before { content: '\e764'; } /* '' */
+.iconnew-facebook-rect-1:before { content: '\e800'; } /* '' */
+.iconnew-twitter-bird:before { content: '\f303'; } /* '' */
+.iconnew-vimeo:before { content: '\f30f'; } /* '' */
+.iconnew-globe:before { content: '𝌍'; } /* '\1d30d' */
 
 i {
 	margin-right: 10px;
@@ -333,11 +335,16 @@ nav#main-nav {
 	}
 }
 
-#arrow-wrapper {
+#arrow {
   position: fixed;
-  bottom: 0;
+  bottom: 4%;
   left: 2%;
-  height: 100px;
+  height: 25px;
+  overflow: hidden;
+  background-color: #89949B;
+  border: 5px solid #89949B;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
   @media (max-width: 480px) {
   	display: none;
 	}
@@ -346,19 +353,11 @@ nav#main-nav {
 	}
 	@media (max-device-width: 1024px) and (orientation: landscape) { 
 		display: none;
-	}
-  #arrow {
-	  position: relative;
-	  overflow: hidden;
-	  background-color: #89949B;
-	  border: 5px solid #89949B;
-	  -moz-border-radius: 5px;
-	  -webkit-border-radius: 5px;
-	  i {
-		  font-size: 24px;
-		  color: #fff;
-		  padding: 10px 15px 18px;
-		}
+	}	  
+  i {
+	  font-size: 24px;
+	  color: #fff;
+	  padding: 0 0 0 15px;
 	}
 }
 
@@ -633,7 +632,7 @@ nav#main-nav {
 		box-shadow:rgba(0, 0, 0, 0.4) 0 0 10px;
 	}
 	.speaker-info {
-		width: 500px;
+		width: 438px;
 		display: block;
 		margin: 0 auto 30px auto;
 		background: #273138;

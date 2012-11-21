@@ -18,7 +18,7 @@ $(document).ready(function(){
 
 
   $(window).scroll(function() {
-    $('#arrow-wrapper').fadeOut("fast");
+    $('#arrow').fadeOut("fast");
   }); 
 
   $('#main-nav ul li a[href^="#"]').on('click', function(evt) {
