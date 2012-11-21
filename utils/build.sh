@@ -16,11 +16,17 @@ cp ../.htaccess ../dist/.htaccess
 echo "Minifying index.html"
 java -jar htmlcompressor.jar -c utf-8 --compress-js --compress-css -o ../dist/index.html ../index.html
 
-echo "Combining CSS manually (since YUI can't seem to get that part right)"
-cat ../css/bootstrap.css ../css/bootstrap-responsive.css ../css/style.css>../dist/css/combined-style.css
+while [ "$1" != "" ]; do
+    case $1 in
+        -l | --less )           
+            echo "Compiling LESS"
+            lessc ../less/style.less ../css/style.css
+    esac
+    shift
+done
 
 echo "Minifying CSS"
-java -jar yuicompressor.jar --type css --charset utf-8 -o ../dist/css/combined-style.css ../dist/css/combined-style.css
+java -jar yuicompressor.jar --type css --charset utf-8 -o ../dist/css/style.css ../css/style.css
 
 echo "Minifying JS"
 java -jar compiler.jar --js ../js/bootstrap-carousel.js ../js/bootstrap-modal.js ../js/bootstrap-tooltip.js ../js/jquery.scrollTo.min.js ../js/waypoints.min.js ../js/jquery.fitvids.js ../js/general.js --js_output_file ../dist/js/combined-scripts.js
