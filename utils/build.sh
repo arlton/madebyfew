@@ -17,8 +17,8 @@ echo "Copying index.html"
 cp ../index.html ../dist/index.html
 
 echo "Updating index.html script references"
-sed -i 's/<script type\=\"text\/javascript\" src\=\"js\/css3-mediaqueries\.js\"><\/script>//g' ../dist/index.html
-sed -i 's/<script type\=\"text\/javascript\" src\=\"js\/jquery\.js\"><\/script>//g' ../dist/index.html
+sed -i -e 's/<script type\=\"text\/javascript\" src\=\"js\/css3-mediaqueries\.js\"><\/script>/ /g' ../dist/index.html
+sed -i -e 's/<script type\=\"text\/javascript\" src\=\"js\/jquery\.js\"><\/script>/ /g' ../dist/index.html
 
 echo "Minifying index.html"
 java -jar htmlcompressor.jar -c utf-8 --compress-js --compress-css -o ../dist/index.html ../dist/index.html
