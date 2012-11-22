@@ -8050,7 +8050,7 @@ nav#main-nav a.register-ipad {
   box-shadow: rgba(0, 0, 0, 0.4) 0 0 10px;
 }
 #last-year-speakers .speaker-info {
-  width: 500px;
+  width: 438px;
   display: block;
   margin: 0 auto 30px auto;
   background: #273138;
@@ -8327,7 +8327,7 @@ nav#main-nav a.register-ipad {
 }
 #clinton-center {
   background-color: #000;
-  background-image: url(../img/clinton.png);
+  background-image: url(../img/clinton.jpg);
   background-position: 50% 0;
   background-repeat: no-repeat;
   -moz-background-size: 100%;
