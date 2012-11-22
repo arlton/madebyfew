@@ -7388,6 +7388,7 @@ i {
 }
 body {
   background: #ffffff url('../img/subtle_dots.png') top left repeat;
+  padding: 0;
 }
 body,
 p,
@@ -7435,11 +7436,6 @@ nav#main-nav {
 @media (max-width: 480px) {
   nav#main-nav {
     padding: 10px 0;
-  }
-}
-@media (max-width: 767px) {
-  nav#main-nav {
-    margin-left: -20px;
   }
 }
 @media (min-width: 768px) and (max-width: 979px) {
