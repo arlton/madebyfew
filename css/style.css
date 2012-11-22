@@ -7491,6 +7491,8 @@ nav#main-nav ul li {
   margin-right: 20px;
 }
 nav#main-nav ul li a {
+  font-size: 16px;
+  font-weight: 100px;
   color: #273138;
   background: -webkit-gradient(linear, left top, left bottom, from(#555555), to(#000000));
   -webkit-background-clip: text;
@@ -8078,6 +8080,7 @@ nav#main-nav a.register-ipad {
   }
 }
 #last-year-speakers h3 {
+  font-size: 16px;
   color: #fff;
   text-align: center;
   font-weight: 100;
@@ -8359,7 +8362,6 @@ nav#main-nav a.register-ipad {
   background: #fff;
   padding: 0;
   box-shadow: #000000 0 0 3px;
-  font-size: 50px;
   font-weight: 100;
   cursor: default;
   border: 1px solid #fff;
@@ -8367,6 +8369,8 @@ nav#main-nav a.register-ipad {
 }
 #clinton-center .clinton-center-blurb h3 {
   font-size: 24px;
+  text-shadow: 0px 2px 2px #fff;
+  font-weight: 100;
   text-align: center;
   margin: 20px 0;
   padding: 20px 0;
