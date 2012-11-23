@@ -80,6 +80,6 @@ $(document).ready(function(){
 
   $(".last-year-speaker").fitVids();
 
-  $(window).stellar();
+  $('#speakers').stellar();
 
 });

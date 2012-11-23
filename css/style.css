@@ -7963,6 +7963,7 @@ nav#main-nav a.register-ipad {
   background: #fff;
   padding: 20px;
   box-shadow: rgba(0, 0, 0, 0.2) 0 0 3px;
+  position: relative;
 }
 #speakers .speaker img {
   margin: 0 auto;
