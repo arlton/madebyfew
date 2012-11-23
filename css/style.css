@@ -7959,7 +7959,7 @@ nav#main-nav a.register-ipad {
   box-shadow: rgba(0, 0, 0, 0.3) 0 0 10px;
 }
 #speakers .speaker {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   background: #fff;
   padding: 20px;
   box-shadow: rgba(0, 0, 0, 0.2) 0 0 3px;
@@ -8386,6 +8386,11 @@ nav#main-nav a.register-ipad {
 }
 #clinton-center .clinton-center-blurb .carousel {
   margin-bottom: 0;
+}
+@media (max-width: 767px) {
+  #clinton-center {
+    background-image: none;
+  }
 }
 #location {
   min-height: 580px;

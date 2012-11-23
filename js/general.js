@@ -30,13 +30,6 @@ $(document).ready(function(){
     return false;
   });
 
-  // Do our DOM lookups beforehand
-  // var nav_container = $(".nav-container");
-  // var nav = $("#main-nav");
-  
-  // var top_spacing = 15;
-  // var waypoint_offset = 50;
-  
   var sections = $("section");
   var navigation_links = $("#main-nav ul li a");
   
@@ -86,5 +79,7 @@ $(document).ready(function(){
   });
 
   $(".last-year-speaker").fitVids();
+
+  $(window).stellar();
 
 });
