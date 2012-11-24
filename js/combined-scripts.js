@@ -14,7 +14,9 @@ loadScript('js/bootstrap-carousel.js');
 loadScript('js/bootstrap-modal.js');
 loadScript('js/bootstrap-tooltip.js');
 loadScript('js/jquery.scrollTo.min.js');
+loadScript('js/jquery.stellar.js');
 loadScript('js/waypoints.min.js');
+loadScript('js/jquery.easing.1.3.js');
 loadScript('js/jquery.fitvids.js');
 $(document).ready(function() {
 	loadScript('js/general.js');
