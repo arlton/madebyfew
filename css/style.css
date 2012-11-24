@@ -7818,7 +7818,7 @@ nav#main-nav a.register-ipad {
 #speakers {
   background: #ffffff url('../img/gplaypattern.png') top left repeat;
   padding: 50px 0 0 0;
-  min-height: 720px;
+  position: relative;
 }
 @media (max-width: 480px) {
   #speakers {
@@ -7881,17 +7881,16 @@ nav#main-nav a.register-ipad {
     margin: 0 0 40px 0;
   }
 }
-#speakers .speaker-holder {
-  display: none;
+#speakers .speaker-requirements {
   margin-bottom: 50px;
   background: #fff;
-  padding: 40px 40px 170px 70px;
+  padding: 40px 20px 60px 20px;
+  text-align: center;
   box-shadow: rgba(0, 0, 0, 0.2) 0 0 3px;
-  font-size: 50px;
   font-weight: 100;
 }
 @media (max-width: 480px) {
-  #speakers .speaker-holder {
+  #speakers .speaker-requirements {
     display: block;
     font-size: 20px;
     padding: 20px;
@@ -7899,7 +7898,7 @@ nav#main-nav a.register-ipad {
   }
 }
 @media (min-width: 768px) and (max-width: 979px) {
-  #speakers .speaker-holder {
+  #speakers .speaker-requirements {
     display: block;
     font-size: 32px;
     padding: 120px 40px;
@@ -7908,65 +7907,43 @@ nav#main-nav a.register-ipad {
   }
 }
 @media (max-device-width: 1024px) and (orientation: landscape) {
-  #speakers .speaker-holder {
+  #speakers .speaker-requirements {
     display: block;
     margin-bottom: 0;
   }
 }
-#speakers .speaker-holder p {
-  padding: 120px 40px 40px 30px;
-  text-align: center;
+#speakers .speaker-requirements h3 {
+  font-size: 50px;
+  font-weight: 100;
+}
+#speakers .speaker-requirements p {
+  font-size: 14px;
 }
 @media (max-width: 480px) {
-  #speakers .speaker-holder p {
+  #speakers .speaker-requirements p {
     padding: 0 0 20px 0;
   }
 }
 @media (min-width: 768px) and (max-width: 979px) {
-  #speakers .speaker-holder p {
+  #speakers .speaker-requirements p {
     padding: 0 0 20px 0;
   }
 }
 @media (max-device-width: 1024px) and (orientation: landscape) {
-  #speakers .speaker-holder p {
+  #speakers .speaker-requirements p {
     font-size: 42px;
   }
-}
-#speakers .speaker-holder .xoxo {
-  width: 400px;
-  display: block;
-  margin: 0 auto;
-}
-@media (max-width: 480px) {
-  #speakers .speaker-holder .xoxo {
-    width: 200px;
-  }
-}
-#speakers .speaker-holder .xoxo p {
-  background-color: #fff;
-  padding: 0 20px;
-  margin: -35px auto 0 auto;
-  font-size: 20px;
-  z-index: 999;
-  display: block;
-  width: 60px;
-}
-#speakers .speaker-holder .xoxo hr {
-  border-top-color: #273138;
-  z-index: -9999;
 }
 #speakers .speaker-holder:hover {
   box-shadow: rgba(0, 0, 0, 0.3) 0 0 10px;
 }
 #speakers .speaker {
-  margin-bottom: 30px;
   background: #fff;
-  padding: 20px;
   box-shadow: rgba(0, 0, 0, 0.2) 0 0 3px;
-  position: relative;
+  position: absolute;
+  border: 1px solid #fff;
 }
 #speakers .speaker img {
-  margin: 0 auto;
   display: block;
 }
 #speakers .speaker h3 {
@@ -7998,6 +7975,7 @@ nav#main-nav a.register-ipad {
   font-weight: 200;
 }
 #last-year-speakers {
+  margin-top: 400px;
   background-color: #89949B;
   padding: 50px 0 0 0;
 }
