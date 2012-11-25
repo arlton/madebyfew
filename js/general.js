@@ -11,7 +11,7 @@ $(document).ready(function(){
   animUp();
 
   $('#clinton-center h2').click(function(){
-    $("#clinton-center").animate({height: '900px'});  
+    $("#clinton-center").animate({height: '900px'});
   });
 
   $('.carousel').carousel();
@@ -19,7 +19,7 @@ $(document).ready(function(){
 
   $(window).scroll(function() {
     $('#arrow').fadeOut("fast");
-  }); 
+  });
 
   $('#main-nav ul li a[href^="#"]').on('click', function(evt) {
     evt.preventDefault();
@@ -32,10 +32,10 @@ $(document).ready(function(){
 
   var sections = $("section");
   var navigation_links = $("#main-nav ul li a");
-  
+
   sections.waypoint({
     handler: function(event, direction) {
-    
+
       var active_section;
       active_section = $(this);
       if (direction === "up") active_section = active_section.prev();
@@ -81,5 +81,27 @@ $(document).ready(function(){
   $(".last-year-speaker").fitVids();
 
   $(window).stellar();
+  $(window).resize(function() {
+    winHeight = $(window).height();
+    $("#scrollWrapper > div").height(winHeight);
 
+    // Find out all my elements that are being manipulated with stellar
+    var particles = $(window).data('plugin_stellar').particles;
+
+    // Temporarily stop stellar so we can move our elements around
+    // data('plugin_stellar') let's me access the instance of stellar
+    // So I can use any of its methods. See stellar's source code
+    $(window).data('plugin_stellar').destroy();
+
+    $.each(particles, function(i, el){
+        // destroy() sets the positions to their original PIXEL values.
+        // Mine were percentages, so I need to restore that.
+        this.$element.css('top', '');
+
+        // Once the loop is finished, re-initialize stellar
+        if(particles.length - 1 == i){
+            $(window).data('plugin_stellar').init();
+        }
+    });
+  });
 });
