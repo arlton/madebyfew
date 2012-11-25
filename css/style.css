@@ -7843,14 +7843,10 @@ nav#main-nav a.register-ipad {
   margin-top: 200px;
 }
 @media (max-width: 480px) {
-  #speakers #speakers-top {
-    min-height: 300px;
-  }
+  
 }
 @media (min-width: 768px) and (max-width: 979px) {
-  #speakers #speakers-top {
-    min-height: 520px;
-  }
+  
 }
 @media (max-device-width: 1024px) and (orientation: landscape) {
   
@@ -7901,9 +7897,7 @@ nav#main-nav a.register-ipad {
 }
 @media (min-width: 768px) and (max-width: 979px) {
   #speakers .speaker-requirements {
-    display: block;
-    font-size: 32px;
-    padding: 120px 40px;
+    padding: 40px;
     margin-left: 20px;
     margin-right: 20px;
   }
@@ -7915,11 +7909,16 @@ nav#main-nav a.register-ipad {
   }
 }
 #speakers .speaker-requirements h3 {
-  font-size: 50px;
+  font-size: 48px;
   font-weight: 100;
 }
+@media (min-width: 768px) and (max-width: 979px) {
+  #speakers .speaker-requirements h3 {
+    font-size: 32px;
+  }
+}
 #speakers .speaker-requirements p {
-  font-size: 16px;
+  font-size: 20px;
 }
 @media (max-width: 480px) {
   #speakers .speaker-requirements p {
@@ -7929,11 +7928,12 @@ nav#main-nav a.register-ipad {
 @media (min-width: 768px) and (max-width: 979px) {
   #speakers .speaker-requirements p {
     padding: 0 0 20px 0;
+    font-size: 16px;
   }
 }
 @media (max-device-width: 1024px) and (orientation: landscape) {
   #speakers .speaker-requirements p {
-    font-size: 42px;
+    font-size: 24px;
   }
 }
 #speakers .speaker-holder:hover {
@@ -7946,10 +7946,6 @@ nav#main-nav a.register-ipad {
   border: 1px solid #fff;
   z-index: 1;
   text-align: center;
-}
-#speakers .speaker img {
-  display: block;
-  z-index: 999;
 }
 #speakers .speaker h3 {
   font-weight: 600;
@@ -7983,13 +7979,52 @@ nav#main-nav a.register-ipad {
   font-weight: 200;
 }
 #speakers .speaker .more-to-go {
-  padding-bottom: 110px;
+  padding: 0 40px 110px 40px;
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  #speakers .speaker .more-to-go {
+    padding: 100px 20px;
+  }
 }
 #speakers .speaker .more-to-go h3 {
   margin-top: 110px;
+  font-size: 31px;
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  #speakers .speaker .more-to-go h3 {
+    margin-top: 0;
+    font-size: 24px;
+  }
 }
 #speakers .speaker .more-to-go p {
+  font-size: 18px;
   font-weight: 100;
+}
+#speakers .speaker-photo {
+  position: absolute;
+  z-index: 1;
+}
+#speakers .speaker-photo img {
+  display: block;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 3px;
+  z-index: 999;
+  width: 230px;
+  border: 1px solid #fff;
+  margin: 0 auto;
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  #speakers .more-to-go-full {
+    display: none;
+  }
+}
+#speakers .more-to-go-ipad {
+  display: none;
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  #speakers .more-to-go-ipad {
+    display: block;
+  }
 }
 #last-year-speakers {
   margin-top: 700px;

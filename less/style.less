@@ -416,10 +416,10 @@ nav#main-nav {
 		background: transparent url(../img/speakers-line.png) center top repeat-y;
 		margin-top: 200px;
 		@media (max-width: 480px) {
-	  	min-height: 300px;
+
 		}
 		@media (min-width: 768px) and (max-width: 979px) {
-			min-height: 520px;
+
 		}
 		@media (max-device-width: 1024px) and (orientation: landscape) { 
 		}
@@ -460,9 +460,7 @@ nav#main-nav {
 			margin: 0 20px 0 20px;
 		}
 		@media (min-width: 768px) and (max-width: 979px) {
-			display: block;
-			font-size: 32px;
-			padding: 120px 40px;
+			padding: 40px;
 			margin-left: 20px;
 			margin-right: 20px;
 		}
@@ -471,19 +469,23 @@ nav#main-nav {
 			margin-bottom: 0;
 		}
 		h3 {
-			font-size: 50px;
+			font-size: 48px;
 			font-weight: 100;
+			@media (min-width: 768px) and (max-width: 979px) { 
+				font-size: 32px;
+			}
 		}
 		p {
-			font-size: 16px;
+			font-size: 20px;
 			@media (max-width: 480px) {
 				padding: 0 0 20px 0;
 			}
 			@media (min-width: 768px) and (max-width: 979px) {
 				padding: 0 0 20px 0;
+				font-size: 16px;
 			}
 			@media (max-device-width: 1024px) and (orientation: landscape) { 
-				font-size: 42px;
+				font-size: 24px;
 			}
 		}
 	}
@@ -492,16 +494,11 @@ nav#main-nav {
 	}
 	.speaker {
 		background: #fff;
-		// padding: 20px;
 		box-shadow: rgba(0, 0, 0, 0.2) 0 0 3px;
 		position:absolute;
 		border: 1px solid #fff;
 		z-index: 1;
 		text-align: center;
-		img {
-			display: block;
-			z-index: 999;
-		}
 		h3 {
 			font-weight: 600;
 			font-size: 40px;
@@ -534,13 +531,46 @@ nav#main-nav {
 			font-weight: 200;
 		}
 		.more-to-go {
-			padding-bottom: 110px;
+			padding: 0 40px 110px 40px;
+			@media (min-width: 768px) and (max-width: 979px) {
+				padding: 100px 20px;
+			}
 			h3 {
 				margin-top: 110px;
+				font-size: 31px;
+				@media (min-width: 768px) and (max-width: 979px) {
+					margin-top: 0;
+					font-size: 24px;
+				}
 			}
 			p {
+				font-size: 18px;
 				font-weight: 100;
 			}
+		}
+	}
+	.speaker-photo {
+		position:absolute;
+		z-index: 1;
+		img {
+			display: block;
+			background: #fff;
+			box-shadow: rgba(0, 0, 0, 0.2) 0 0 3px;
+			z-index: 999;
+			width: 230px;
+			border: 1px solid #fff;
+			margin: 0 auto;
+		}
+	}
+	.more-to-go-full {
+		@media (min-width: 768px) and (max-width: 979px) {
+			display: none;
+		}
+	}
+	.more-to-go-ipad {
+		display: none;
+		@media (min-width: 768px) and (max-width: 979px) {
+			display: block;
 		}
 	}
 }
