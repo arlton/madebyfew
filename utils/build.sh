@@ -49,7 +49,6 @@ java \
             ../js/waypoints.min.js \
             ../js/jquery.easing.1.3.js \
             ../js/jquery.fitvids.js \
-            ../js/scrollability.js \
             ../js/general.js \
     --js_output_file \
             ../dist/js/combined-scripts.js
