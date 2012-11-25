@@ -46,6 +46,7 @@ java \
             ../js/bootstrap-tooltip.js \
             ../js/jquery.scrollTo.min.js \
             ../js/jquery.stellar.js \
+            ../js/scrollability.js \
             ../js/waypoints.min.js \
             ../js/jquery.easing.1.3.js \
             ../js/jquery.fitvids.js \
