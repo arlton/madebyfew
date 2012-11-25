@@ -1,6 +1,6 @@
 /* See LICENSE for terms of usage */
 
-"style css/style.css"
+"style scrollability/scrollbar.css"
 
 // var logs = [];
 
