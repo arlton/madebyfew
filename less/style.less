@@ -345,6 +345,7 @@ nav#main-nav {
 		@media (min-width: 768px) and (max-width: 979px) {
 			font-weight: 100;
 			color: #777;
+			font-size: 23px;
 		}
 		span {
 			font-size: 12px;
@@ -366,7 +367,13 @@ nav#main-nav {
 			display: block;
 		}
 	}
-	p.quote3, p.quote4 {
+	p.quote3 {
+		margin-top: 28px;
+		@media (max-width: 480px) {
+			margin-top: 10px;
+		}
+	}
+	p.quote4 {
 		margin-top: 28px;
 		@media (max-width: 480px) {
 			margin-top: 20px;
@@ -405,7 +412,7 @@ nav#main-nav {
 	}
 	@media (min-width: 768px) and (max-width: 979px) {
 		padding: 40px 0 20px 0;
-		min-height: 520px;
+		min-height: 420px;
 	}
 	@media (max-device-width: 1024px) and (orientation: landscape) { 
 		padding: 40px 0 20px 0;
@@ -413,21 +420,24 @@ nav#main-nav {
 	#speakers-top {
 		min-height: 1020px; 
 		padding-bottom: 80px;
-		background: transparent url(../img/speakers-line.png) center top repeat-y;
 		margin-top: 200px;
 		@media (max-width: 480px) {
-
+			background: none;
 		}
 		@media (min-width: 768px) and (max-width: 979px) {
-
+			min-height: 420px; 
 		}
 		@media (max-device-width: 1024px) and (orientation: landscape) { 
+			min-height: 420px; 
 		}
 	}
 	[class^="iconnew-"]:before,
 	[class*=" iconnew-"]:before {
 	  color: #273138;
 	  opacity: 0.5;
+	  @media (max-width: 480px) {
+	  	display: none;
+		}
 	}
 	h2 {
 		font-size: 36px;
@@ -437,13 +447,13 @@ nav#main-nav {
 		font-style: italic;
 		text-align: center;
 		@media (max-width: 480px) {
-	  	margin: 0 0 40px 0;
+	  	margin: -180px 0 40px 0;
 		}
 		@media (min-width: 768px) and (max-width: 979px) {
-			margin: 0 0 40px 0;
+			margin: -180px 0 40px 0;
 		}
 		@media (max-device-width: 1024px) and (orientation: landscape) { 
-			margin: 0 0 40px 0;
+			margin: -180px 0 40px 0;
 		}
 	}
 	.speaker-requirements {
@@ -454,23 +464,27 @@ nav#main-nav {
 		box-shadow: rgba(0, 0, 0, 0.2) 0 0 3px;
 		font-weight: 100;
 		@media (max-width: 480px) {
-			display: block;
-			font-size: 20px;
-			padding: 20px;
-			margin: 0 20px 0 20px;
+			margin: -80px 20px 50px 20px;
+			padding: 40px 20px;
 		}
 		@media (min-width: 768px) and (max-width: 979px) {
 			padding: 40px;
 			margin-left: 20px;
 			margin-right: 20px;
+			margin-top: -80px; 
 		}
 		@media (max-device-width: 1024px) and (orientation: landscape) { 
+			margin-top: -80px; 
 			display: block;
 			margin-bottom: 0;
 		}
 		h3 {
 			font-size: 48px;
 			font-weight: 100;
+			@media (max-width: 480px) {
+				font-size: 26px;
+				font-weight: 300;
+			}
 			@media (min-width: 768px) and (max-width: 979px) { 
 				font-size: 32px;
 			}
@@ -479,6 +493,7 @@ nav#main-nav {
 			font-size: 20px;
 			@media (max-width: 480px) {
 				padding: 0 0 20px 0;
+				font-size: 16px;
 			}
 			@media (min-width: 768px) and (max-width: 979px) {
 				padding: 0 0 20px 0;
@@ -522,6 +537,14 @@ nav#main-nav {
 		}
 		p.links a.website {
 			margin-right: 20px;
+			@media (max-width: 480px) {
+				margin: 0 0 0 -10px;
+			}
+		}
+		p.links a.twitter {
+			@media (max-width: 480px) {
+				margin: 0;
+			}
 		}
 		p.bio {
 			font-weight: 200;
@@ -532,12 +555,23 @@ nav#main-nav {
 		}
 		.more-to-go {
 			padding: 0 40px 110px 40px;
+			@media (max-width: 480px) {
+				display: block;
+				margin-left: 20px;
+				margin-right: 20px;
+				padding: 40px 20px;
+			}
 			@media (min-width: 768px) and (max-width: 979px) {
 				padding: 100px 20px;
 			}
 			h3 {
 				margin-top: 110px;
 				font-size: 31px;
+				@media (max-width: 480px) {
+					margin-top: 10px;
+					font-size: 22px;
+					margin-bottom: 10px;
+				}
 				@media (min-width: 768px) and (max-width: 979px) {
 					margin-top: 0;
 					font-size: 24px;
@@ -549,28 +583,86 @@ nav#main-nav {
 			}
 		}
 	}
+	.special {
+		display: block;
+		margin-left: -30px;
+		margin-top: 260px;
+		@media (max-width: 480px) {
+			margin-top: 40px;
+		}
+	}
 	.speaker-photo {
 		position:absolute;
 		z-index: 1;
 		img {
+			box-shadow: rgba(0, 0, 0, 0.4) 0 0 3px;
 			display: block;
 			background: #fff;
-			box-shadow: rgba(0, 0, 0, 0.2) 0 0 3px;
 			z-index: 999;
-			width: 230px;
 			border: 1px solid #fff;
 			margin: 0 auto;
 		}
 	}
-	.more-to-go-full {
+	.speakers-visible-desktop {
+		@media (max-width: 480px) {
+			display: none;
+		}
 		@media (min-width: 768px) and (max-width: 979px) {
 			display: none;
 		}
+		@media (max-device-width: 1024px) and (orientation: landscape) { 
+			display: none;
+		}
 	}
-	.more-to-go-ipad {
+	.speakers-visible-ios {
 		display: none;
+		@media (max-width: 480px) {
+			display: block;
+		}
 		@media (min-width: 768px) and (max-width: 979px) {
 			display: block;
+		}
+		@media (max-device-width: 1024px) and (orientation: landscape) { 
+			display: block;
+		}
+		.speaker {
+			margin-top: 200px;
+			padding: 0 20px 20px 20px;
+			display: block;
+			@media (max-width: 480px) {
+				position: relative;
+				padding-bottom: 0;
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+		}
+		.speaker-photo {
+			position:relative;
+			display: block;
+			z-index: 1;
+			margin-top: 50px;
+			@media (max-width: 480px) {
+				margin-top: -420px;
+			}
+			@media (min-width: 768px) and (max-width: 979px) {
+				margin-left: 20px;
+			}
+			img {
+				display: block;
+				background: #fff;
+				box-shadow: rgba(0, 0, 0, 0.2) 0 0 3px;
+				z-index: 999;
+				width: 230px;
+				border: 1px solid #fff;
+				margin: 0 auto 40px auto;
+			}
+		}
+		.special {
+			margin-left: -20px;
+			@media (max-width: 480px) {
+				margin-left: 20px;
+				margin-right: 20px;
+			}
 		}
 	}
 }
@@ -580,12 +672,15 @@ nav#main-nav {
 	background-color: #89949B;
 	padding: 50px 0 0 0;
 	@media (max-width: 480px) {
-	}
+  	margin-top: 100px;
+  }
 	@media (min-width: 768px) and (max-width: 979px) {
 		padding: 40px 0 0 0;
+		margin-top: 580px;
 	}
 	@media (max-device-width: 1024px) and (orientation: landscape) { 
 		padding: 40px 0 0 0;
+		margin-top: 580px;
 	}
 	h2 {
 		font-size: 36px;
@@ -725,10 +820,12 @@ nav#main-nav {
 		@media (min-width: 768px) and (max-width: 979px) {
 			padding: 60px 20px;
 	  	margin-top: 40px;
+	  	margin-bottom: -20px;
 		}
 		@media (max-device-width: 1024px) and (orientation: landscape) { 
 			padding: 60px 20px;
 	  	margin-top: 40px;
+	  	margin-bottom: -20px;
 		}
 		p {
 			color: #89949B;
@@ -782,11 +879,9 @@ nav#main-nav {
 	}
 	@media (min-width: 768px) and (max-width: 979px) {
 		padding: 0 20px 40px 20px;
-		margin-top: -20px;
 	}
 	@media (max-device-width: 1024px) and (orientation: landscape) { 
 		padding: 0 20px 40px 20px;
-		margin-top: -20px;
 	}
 	h2 {
 		font-size: 36px;
