@@ -79,7 +79,8 @@ $(document).ready(function(){
   });
 
   $(".last-year-speaker").fitVids();
-
+  $('.speakers-visible-desktop').height($(window).height());
+  $('.speakers-visible-desktop').css('overflow', 'auto');
   $('.speakers-visible-desktop').stellar();
   $(window).resize(function() {
     winHeight = $(window).height();
