@@ -80,7 +80,7 @@ $(document).ready(function(){
 
   $(".last-year-speaker").fitVids();
 
-  $(window).stellar();
+  $('.speakers-visible-desktop').stellar();
   $(window).resize(function() {
     winHeight = $(window).height();
     $("#scrollWrapper > div").height(winHeight);
