@@ -8082,13 +8082,6 @@ nav#main-nav a.register-ipad {
   border: 1px solid #fff;
   margin: 0 auto;
 }
-#speakers .speakers-visible-desktop-wrapper {
-  height: 2000px;
-  position: relative;
-}
-#speakers .speakers-visible-desktop {
-  position: relative;
-}
 @media (max-width: 480px) {
   #speakers .speakers-visible-desktop {
     display: none;

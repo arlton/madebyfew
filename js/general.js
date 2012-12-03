@@ -79,30 +79,32 @@ $(document).ready(function(){
   });
 
   $(".last-year-speaker").fitVids();
-  $('.speakers-visible-desktop').height($(window).height());
-  $('.speakers-visible-desktop').css('overflow', 'auto');
-  $('.speakers-visible-desktop').stellar();
+
+  $(window).stellar();
   $(window).resize(function() {
-    winHeight = $(window).height();
-    $("#scrollWrapper > div").height(winHeight);
+    // Assuming we're rolling with stellar based on screen width
+    if ($(window).width >= 960) {
+        winHeight = $(window).height();
+        $("#scrollWrapper > div").height(winHeight);
 
-    // Find out all my elements that are being manipulated with stellar
-    var particles = $(window).data('plugin_stellar').particles;
+        // Find out all my elements that are being manipulated with stellar
+        var particles = $(window).data('plugin_stellar').particles;
 
-    // Temporarily stop stellar so we can move our elements around
-    // data('plugin_stellar') let's me access the instance of stellar
-    // So I can use any of its methods. See stellar's source code
-    $(window).data('plugin_stellar').destroy();
+        // Temporarily stop stellar so we can move our elements around
+        // data('plugin_stellar') let's me access the instance of stellar
+        // So I can use any of its methods. See stellar's source code
+        $(window).data('plugin_stellar').destroy();
 
-    $.each(particles, function(i, el){
-        // destroy() sets the positions to their original PIXEL values.
-        // Mine were percentages, so I need to restore that.
-        this.$element.css('top', '');
+        $.each(particles, function(i, el){
+            // destroy() sets the positions to their original PIXEL values.
+            // Mine were percentages, so I need to restore that.
+            this.$element.css('top', '');
 
-        // Once the loop is finished, re-initialize stellar
-        if(particles.length - 1 == i){
-            $(window).data('plugin_stellar').init();
-        }
-    });
+            // Once the loop is finished, re-initialize stellar
+            if(particles.length - 1 == i){
+                $(window).data('plugin_stellar').init();
+            }
+        });
+    }
   });
 });
