@@ -38,7 +38,9 @@ $(document).ready(function(){
 
       var active_section;
       active_section = $(this);
-      if (direction === "up") active_section = active_section.prev();
+      if (direction === "up") {
+        active_section = active_section.prev();
+      }
 
       var active_link = $('nav a[href="#' + active_section.attr("id") + '"]');
       navigation_links.removeClass("current");
@@ -88,7 +90,8 @@ $(document).ready(function(){
 
   $(window).resize(function() {
     // If we've resized to above 960 and stellar hasn't been instantiated, do so now
-    if ($(window).width() >= 960 && typeof $(window).data('plugin_stellar') === 'undefined') {
+    if ($(window).width() >= 960 &&
+        typeof $(window).data('plugin_stellar') === 'undefined') {
         console.log('Instantiating stellar after resize');
         $(window).stellar();
     }
@@ -112,7 +115,7 @@ $(document).ready(function(){
             this.$element.css('top', '');
 
             // Once the loop is finished, re-initialize stellar
-            if(particles.length - 1 == i){
+            if(particles.length - 1 === i){
                 $(window).data('plugin_stellar').init();
             }
         });
