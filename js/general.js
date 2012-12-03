@@ -80,10 +80,21 @@ $(document).ready(function(){
 
   $(".last-year-speaker").fitVids();
 
-  $(window).stellar();
+  // If we're at the right window size, instantiate stellar
+  if ($(window).width() >= 960) {
+    console.log('Instantiating stellar on load');
+    $(window).stellar();
+  }
+
   $(window).resize(function() {
+    // If we've resized to above 960 and stellar hasn't been instantiated, do so now
+    if ($(window).width() >= 960 && typeof $(window).data('plugin_stellar') === 'undefined') {
+        console.log('Instantiating stellar after resize');
+        $(window).stellar();
+    }
+
     // Assuming we're rolling with stellar based on screen width
-    if ($(window).width >= 960) {
+    if ($(window).width() >= 960) {
         winHeight = $(window).height();
         $("#scrollWrapper > div").height(winHeight);
 
