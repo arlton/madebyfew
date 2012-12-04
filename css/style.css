@@ -7844,7 +7844,7 @@ nav#main-nav a.register-ipad {
   }
 }
 #speakers #speakers-top {
-  min-height: 1020px;
+  min-height: 620px;
   padding-bottom: 80px;
   margin-top: 200px;
 }
@@ -8062,7 +8062,6 @@ nav#main-nav a.register-ipad {
 }
 #speakers .special {
   display: block;
-  margin-left: -30px;
   margin-top: 260px;
 }
 @media (max-width: 480px) {
@@ -8163,7 +8162,7 @@ nav#main-nav a.register-ipad {
   }
 }
 #last-year-speakers {
-  margin-top: 700px;
+  margin-top: 500px;
   background-color: #89949B;
   padding: 50px 0 0 0;
 }
