@@ -7450,14 +7450,14 @@ nav#main-nav {
 }
 nav#main-nav p {
   font-weight: 100;
-  font-size: 14px;
+  font-size: 12px;
+  margin-top: 12px;
+  line-height: 16px;
   color: #273138;
 }
 @media (max-width: 480px) {
   nav#main-nav p {
     font-size: 12px;
-    text-align: right;
-    padding-right: 15px;
   }
 }
 @media (min-width: 768px) and (max-width: 979px) {
@@ -7466,8 +7466,87 @@ nav#main-nav p {
     padding-top: 3px;
   }
 }
+nav#main-nav p a.register {
+  background-color: #273138;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  color: #FFFFFF;
+  display: block;
+  float: left;
+  font-size: 14px;
+  letter-spacing: 2px;
+  padding: 12px 10px 10px 22px;
+  width: 95px;
+  margin: -12px 20px 20px 0;
+  text-transform: uppercase;
+  -webkit-transition: background-color 0.2s ease-out;
+  transition: background-color background-color 0.2s ease-out;
+  border: 1px solid #fff;
+  text-shadow: 0px 1px 1px #263138;
+}
+@media (max-width: 480px) {
+  nav#main-nav p a.register {
+    margin-bottom: 0;
+    width: 80px;
+    font-size: 12px;
+    margin-left: 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  nav#main-nav p a.register {
+    margin-bottom: 3px;
+  }
+}
+@media (max-device-width: 1024px) and (orientation: landscape) {
+  nav#main-nav p a.register {
+    margin-bottom: 3px;
+  }
+}
+nav#main-nav p a.register:hover {
+  background-color: #89949B;
+  text-decoration: none;
+}
+@media (max-width: 480px) {
+  nav#main-nav .nav-info {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  nav#main-nav .nav-info {
+    display: none;
+  }
+}
+@media (max-device-width: 1024px) and (orientation: landscape) {
+  nav#main-nav .nav-info {
+    display: none;
+  }
+}
+nav#main-nav .nav-info-ios {
+  display: none;
+}
+@media (max-width: 480px) {
+  nav#main-nav .nav-info-ios {
+    display: block;
+    width: 300px;
+  }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  nav#main-nav .nav-info-ios {
+    display: block;
+    width: 500px;
+  }
+}
+@media (max-device-width: 1024px) and (orientation: landscape) {
+  nav#main-nav .nav-info-ios {
+    display: block;
+    width: 500px;
+  }
+}
 nav#main-nav ul {
   margin-left: 30px;
+  margin-top: 10px;
   overflow: hidden;
 }
 @media (max-width: 480px) {
@@ -7489,7 +7568,7 @@ nav#main-nav ul li {
   font-family: "museo-sans", sans-serif;
   display: block;
   float: right;
-  margin-right: 20px;
+  margin-left: 16px;
 }
 nav#main-nav ul li a {
   font-size: 16px;
@@ -7529,34 +7608,6 @@ nav#main-nav ul li .current:hover {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-nav#main-nav a.register-ipad {
-  display: none;
-  background: -webkit-gradient(linear, left top, left bottom, from(#1199ff), to(#273138));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-@media (max-width: 480px) {
-  nav#main-nav a.register-ipad {
-    display: inline;
-    float: right;
-    font-weight: 300;
-    padding-right: 10px;
-  }
-}
-@media (min-width: 768px) and (max-width: 979px) {
-  nav#main-nav a.register-ipad {
-    display: inline;
-    float: right;
-    font-weight: 300;
-  }
-}
-@media (max-device-width: 1024px) and (orientation: landscape) {
-  nav#main-nav a.register-ipad {
-    display: inline;
-    float: right;
-    font-weight: 300;
-  }
-}
 #hero {
   padding: 150px 0 0 0;
 }
@@ -7571,7 +7622,7 @@ nav#main-nav a.register-ipad {
   }
 }
 #welcome .logo {
-  max-width: 960px;
+  max-width: 940px;
   display: block;
   margin: 0 auto 50px auto;
 }
@@ -8892,7 +8943,7 @@ footer .info {
 footer .info p {
   color: #83949B;
   font-size: 12px;
-  text-align: right;
+  text-align: center;
   text-shadow: 0px 1px 1px #000;
 }
 @media (max-width: 480px) {
