@@ -125,8 +125,11 @@ $(document).ready(function(){
   /* EVENTBRITE SHTUFF */
   Eventbrite({'app_key':'SUYQ3DAUFRTPPKQCDK', 'user_key':'134828332641556141538'}, function(eb_client){
     eb_client.event_get( {'id': 4813227493 }, function( response ){
-        console.log(response);
-        $('#earlybird_tickets_available').text(response.event.tickets[0].ticket.quantity_available);
+        var earlybirdTicketsAvailable = response.event.tickets[0].ticket.quantity_available - response.event.tickets[0].ticket.quantity_sold,
+            regularTicketsAvailable = response.event.tickets[1].ticket.quantity_available - response.event.tickets[1].ticket.quantity_sold;
+
+        $('#earlybird_tickets_available').text(earlybirdTicketsAvailable);
+        $('#regular_tickets_available').text(regularTicketsAvailable);
     });
   });
 });
