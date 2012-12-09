@@ -10,14 +10,15 @@ function loadScript(url)
    head.appendChild(script);
 }
 
-loadScript('js/bootstrap-carousel.js');
 loadScript('js/bootstrap-modal.js');
 loadScript('js/bootstrap-tooltip.js');
+loadScript('js/bootstrap-carousel.js');
 loadScript('js/jquery.scrollTo.min.js');
 loadScript('js/jquery.stellar.js');
 loadScript('js/waypoints.min.js');
 loadScript('js/jquery.easing.1.3.js');
 loadScript('js/jquery.fitvids.js');
+loadScript('js/eventbrite.jquery.js');
 $(document).ready(function() {
 	loadScript('js/general.js');
 });
