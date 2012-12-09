@@ -52,31 +52,23 @@ $(document).ready(function(){
 
   $(window).scroll( function(){
     if($(window).scrollTop()>100){
-    $(".quote1").fadeIn();
+        $(".quote1").fadeIn();
     }
-  });
 
-  $(window).scroll( function(){
     if($(window).scrollTop()>300){
-    $(".quote2").fadeIn();
+        $(".quote2").fadeIn();
     }
-  });
 
-  $(window).scroll( function(){
     if($(window).scrollTop()>400){
-    $(".quote3").fadeIn();
+        $(".quote3").fadeIn();
     }
-  });
 
-  $(window).scroll( function(){
     if($(window).scrollTop()>480){
-    $(".quote4").fadeIn();
+        $(".quote4").fadeIn();
     }
-  });
 
-  $(window).scroll( function(){
     if($(window).scrollTop()>1150){
-    $(".speaker-holder").fadeIn();
+        $(".speaker-holder").fadeIn();
     }
   });
 
@@ -84,8 +76,15 @@ $(document).ready(function(){
 
   // If we're at the right window size, instantiate stellar
   if ($(window).width() >= 960) {
-    console.log('Instantiating stellar on load');
-    $(window).stellar();
+    $(window).stellar({
+        hideDistantElements: true,
+        showElement: function($elem) {
+            $elem.fadeIn('slow');
+        },
+        hideElement: function($elem) {
+            $elem.fadeOut('fast');
+        }
+    });
   }
 
   $(window).resize(function() {
