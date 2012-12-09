@@ -10,7 +10,7 @@ function loadScript(url)
    head.appendChild(script);
 }
 
-loadScript('js/bootstrap-carousel.js');
+loadScript('js/eventbrite.jquery.js');
 loadScript('js/bootstrap-modal.js');
 loadScript('js/bootstrap-tooltip.js');
 loadScript('js/jquery.scrollTo.min.js');
