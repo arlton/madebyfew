@@ -41,7 +41,6 @@ java \
     --js \
             ../js/css3-mediaqueries.js \
             ../js/jquery.js \
-            ../js/eventbrite.jquery.js \
             ../js/bootstrap-carousel.js \
             ../js/bootstrap-modal.js \
             ../js/bootstrap-tooltip.js \
