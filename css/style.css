@@ -8901,6 +8901,10 @@ nav#main-nav ul li .current:hover {
   transition: opacity 0.25s ease-in-out;
   -moz-transition: opacity 0.25s ease-in-out;
   -webkit-transition: opacity 0.25s ease-in-out;
+  max-width: 170px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
 @media (max-width: 480px) {
   #sponsors img {
@@ -8911,7 +8915,7 @@ nav#main-nav ul li .current:hover {
 }
 @media (min-width: 768px) and (max-width: 979px) {
   #sponsors img {
-    width: 100%;
+    max-width: 130px;
   }
 }
 #sponsors img:hover {
