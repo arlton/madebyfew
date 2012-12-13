@@ -7,7 +7,9 @@ echo "Recreating distribution folder"
 mkdir ../dist
 mkdir ../dist/js
 mkdir ../dist/css
+mkdir ../dist/inc
 cp -R ../img/ ../dist/img/
+cp -R ../inc/ ../dist/inc/
 cp -R ../fonts/ ../dist/fonts/
 
 echo "Copying .htaccess file"
