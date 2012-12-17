@@ -126,7 +126,12 @@ $(document).ready(function(){
         var earlybirdTicketsAvailable = response.event.tickets[0].ticket.quantity_available - response.event.tickets[0].ticket.quantity_sold,
             regularTicketsAvailable = response.event.tickets[1].ticket.quantity_available - response.event.tickets[1].ticket.quantity_sold;
 
-        $('#earlybird_tickets_available').text(earlybirdTicketsAvailable);
-        $('#regular_tickets_available').text(regularTicketsAvailable);
+        if (earlybirdTicketsAvailable) {
+            $('#tickets_msg').text('Only ' + earlybirdTicketsAvailable + ' Early Bird tickets left! Seating is limited.');
+        } else {
+            $('#tickets_msg').html('Seating is limited. The event will sell out.');
+        }
+
+        //$('#regular_tickets_available').text(regularTicketsAvailable);
     }, 'json');
 });
