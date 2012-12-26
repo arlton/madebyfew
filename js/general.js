@@ -16,30 +16,44 @@ $(document).ready(function(){
 
   $('.carousel').carousel();
 
-  $('#clinton-center .carousel-inner img').each(function(index, thisImage) {
-    console.log(thisImage);
-    $(thisImage).click(function() {
-        // Dim screen
-        var overlay = $('<div />')
-             .css({
-                'zIndex':'10000',
-                'backgroundColor':'#000000',
-                'position':'fixed',
-                'width':'100%',
-                'height':'100%',
-                'top':'0',
-                'left':'0',
-                'overflow':'auto'
-             })
-             .fadeTo('fast', '0.9')
-             .prependTo('body');
+  function closeOverlay() {
+    $('#venue-overlay').fullScreen(false);
+    $('#venue-overlay').remove();
+  }
 
-        var image = $('<img />')
-             .attr('src', $(thisImage).attr('src'))
-             .css({
-                'width':'100%'
-             })
-             .appendTo(overlay);
+  function openOverlay(thisImage) {
+    // Create overlay and image nodes
+    var overlay = $('<div />')
+         .attr('id','venue-overlay')
+         .prependTo('body');
+
+    var image = $('<img />')
+         .attr('src', $(thisImage).attr('src'))
+         .appendTo(overlay);
+
+    // Fullscreen using bad ass jQuery fullscreen plugin
+    $(overlay).fullScreen(true);
+
+    // Set click events for closing overlay
+    overlay.click(closeOverlay);
+    image.click(closeOverlay);
+  }
+
+  // Set keypress events for overlay
+  $(document).keyup(function(e) { if (e.keyCode == 27) { closeOverlay(); } });
+
+  // Set fullscreen change events for overlay
+  $(document).bind("fullscreenchange", function() {
+    if (!$(document).fullScreen()) { closeOverlay(); }
+  });
+
+  $('#venue-fullscreen-icon').click(function() {
+    openOverlay($('#clinton-center .carousel-inner .active img'));
+  });
+
+  $('#clinton-center .carousel-inner img').each(function(index, thisImage) {
+    $(thisImage).click(function() {
+        openOverlay(thisImage);
     });
   });
 
