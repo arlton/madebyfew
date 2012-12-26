@@ -22,19 +22,24 @@ $(document).ready(function(){
     $('#venue-overlay').remove();
   }
 
-  function openOverlay(thisImage) {
-    // Create overlay and image nodes
-    var overlay = $('<div />')
-         .attr('id','venue-overlay')
-         .prependTo('body');
+  function toggleOverlay(thisImage) {
+    // If already open, then close
+    if ($(document).fullScreen()) {
+        closeOverlay();
+    } else {
+        // Create overlay and image nodes
+        var overlay = $('<div />')
+             .attr('id','venue-overlay')
+             .prependTo('body');
 
-    $('#clinton-center').appendTo(overlay);
+        $('#clinton-center').appendTo(overlay);
 
-    // Fullscreen using bad ass jQuery fullscreen plugin
-    $(overlay).fullScreen(true);
+        // Fullscreen using bad ass jQuery fullscreen plugin
+        $(overlay).fullScreen(true);
 
-    // Set click events for closing overlay
-    //overlay.click(closeOverlay);
+        // Set click events for closing overlay
+        //overlay.click(closeOverlay);
+    }
   }
 
   // Set keypress events for overlay
@@ -46,12 +51,12 @@ $(document).ready(function(){
   });
 
   $('#venue-fullscreen-icon').click(function() {
-    openOverlay($('#clinton-center .carousel-inner .active img'));
+    toggleOverlay($('#clinton-center .carousel-inner .active img'));
   });
 
   $('#clinton-center .carousel-inner img').each(function(index, thisImage) {
     $(thisImage).click(function() {
-        openOverlay(thisImage);
+        toggleOverlay(thisImage);
     });
   });
 
