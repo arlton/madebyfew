@@ -18,7 +18,7 @@ loadScript('js/jquery.stellar.js');
 loadScript('js/waypoints.min.js');
 loadScript('js/jquery.easing.1.3.js');
 loadScript('js/jquery.fitvids.js');
-loadScript('js/jquery.fullscreen-min.js');
+loadScript('js/jquery.fullscreen.js');
 $(document).ready(function() {
 	loadScript('js/general.js');
 });
