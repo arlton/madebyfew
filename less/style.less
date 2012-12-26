@@ -1066,7 +1066,7 @@ nav#main-nav {
 #venue-fullscreen-icon {
     position:absolute;
     top:20px;
-    right:20px;
+    right:50px;
     z-index:10;
     cursor:pointer;
 }
@@ -1089,6 +1089,13 @@ nav#main-nav {
     }
 
     #clinton-center  {
+        background-image:none;
+        background-color:#000000;
+
+        .clinton-center-blurb {
+            border:0;
+        }
+
         .container {
             width:100%;
             margin:0;
@@ -1102,8 +1109,16 @@ nav#main-nav {
             margin-left:0;
         }
 
-        h3 {
+        h2, h3 {
             display:none;
+        }
+
+        .carousel-control.left {
+            margin-left:50px;
+        }
+
+        .carousel-control.right {
+            margin-right:50px;
         }
     }
 }
