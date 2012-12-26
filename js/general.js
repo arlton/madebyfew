@@ -9,13 +9,39 @@ $(document).ready(function(){
   }
 
   animUp();
-
+  /* VENUE */
   $('#clinton-center h2').click(function(){
     $("#clinton-center").animate({height: '900px'});
   });
 
   $('.carousel').carousel();
 
+  $('#clinton-center .carousel-inner img').each(function(index, thisImage) {
+    console.log(thisImage);
+    $(thisImage).click(function() {
+        // Dim screen
+        var overlay = $('<div />')
+             .css({
+                'zIndex':'10000',
+                'backgroundColor':'#000000',
+                'position':'fixed',
+                'width':'100%',
+                'height':'100%',
+                'top':'0',
+                'left':'0',
+                'overflow':'auto'
+             })
+             .fadeTo('fast', '0.9')
+             .prependTo('body');
+
+        var image = $('<img />')
+             .attr('src', $(thisImage).attr('src'))
+             .css({
+                'width':'100%'
+             })
+             .appendTo(overlay);
+    });
+  });
 
   $(window).scroll(function() {
     $('#arrow').fadeOut("fast");
