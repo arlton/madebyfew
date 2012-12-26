@@ -133,5 +133,7 @@ $(document).ready(function(){
         }
 
         //$('#regular_tickets_available').text(regularTicketsAvailable);
-    }, 'json');
+    }, 'json').error(function() { // If this xhr call dies for some reason, show at least something
+        $('#tickets_msg').html('Seating is limited. The event will sell out.');
+    });
 });
