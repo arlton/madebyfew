@@ -8640,6 +8640,18 @@ nav#main-nav ul li .current:hover {
   width: 100%;
   cursor: pointer;
 }
+#venue-overlay #clinton-center .container {
+  width: 100%;
+}
+#venue-overlay #clinton-center .span10 {
+  width: 100%;
+}
+#venue-overlay #clinton-center .offset1 {
+  margin-left: 0;
+}
+#venue-overlay #clinton-center h3 {
+  display: none;
+}
 #location {
   min-height: 580px;
   background-color: #FFFFFF;

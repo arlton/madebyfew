@@ -17,6 +17,7 @@ $(document).ready(function(){
   $('.carousel').carousel();
 
   function closeOverlay() {
+    $('#clinton-center').insertAfter($('#schedule'));
     $('#venue-overlay').fullScreen(false);
     $('#venue-overlay').remove();
   }
@@ -27,16 +28,13 @@ $(document).ready(function(){
          .attr('id','venue-overlay')
          .prependTo('body');
 
-    var image = $('<img />')
-         .attr('src', $(thisImage).attr('src'))
-         .appendTo(overlay);
+    $('#clinton-center').appendTo(overlay);
 
     // Fullscreen using bad ass jQuery fullscreen plugin
     $(overlay).fullScreen(true);
 
     // Set click events for closing overlay
-    overlay.click(closeOverlay);
-    image.click(closeOverlay);
+    //overlay.click(closeOverlay);
   }
 
   // Set keypress events for overlay
@@ -130,7 +128,7 @@ $(document).ready(function(){
   $(window).resize(function() {
     // If we're in overlay mode, make sure that image is vertically centered
     if ($('#venue-overlay').length) {
-        $('#venue-overlay img').css('marginTop', ($(window).height()-$('#venue-overlay img').height())/2 + 'px');
+        //$('#venue-overlay img').css('marginTop', ($(window).height()-$('#venue-overlay img').height())/2 + 'px');
     }
 
     // If we've resized to above 960 and stellar hasn't been instantiated, do so now
