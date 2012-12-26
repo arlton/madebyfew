@@ -128,6 +128,11 @@ $(document).ready(function(){
   }
 
   $(window).resize(function() {
+    // If we're in overlay mode, make sure that image is vertically centered
+    if ($('#venue-overlay').length) {
+        $('#venue-overlay img').css('marginTop', ($(window).height()-$('#venue-overlay img').height())/2 + 'px');
+    }
+
     // If we've resized to above 960 and stellar hasn't been instantiated, do so now
     if ($(window).width() >= 960 &&
         typeof $(window).data('plugin_stellar') === 'undefined') {
