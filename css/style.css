@@ -8637,7 +8637,11 @@ nav#main-nav ul li .current:hover {
 }
 #venue-overlay img {
   display: block;
-  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  width: auto;
+  max-width: none;
+  max-height: none;
   cursor: pointer;
 }
 #venue-overlay #clinton-center {
@@ -8646,6 +8650,9 @@ nav#main-nav ul li .current:hover {
 }
 #venue-overlay #clinton-center .clinton-center-blurb {
   border: 0;
+}
+#venue-overlay #clinton-center .carousel-inner {
+  overflow: visible;
 }
 #venue-overlay #clinton-center .container {
   width: 100%;
