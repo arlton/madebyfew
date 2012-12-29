@@ -22,6 +22,8 @@ $(document).ready(function(){
         $(thisImage).attr('src', $(thisImage).attr('data-lowres-src'));
     });
 
+    $('.carousel-inner').css({ 'height': 'auto' });
+
     $('#venue-overlay').fullScreen(false);
     $('#venue-overlay').remove();
   }
@@ -31,6 +33,9 @@ $(document).ready(function(){
     if ($(document).fullScreen()) {
         closeOverlay();
     } else {
+        // Hide venue fullscreen icon
+        $('#venue-fullscreen-icon').hide();
+
         // Create overlay and image nodes
         var overlay = $('<div />')
              .attr('id','venue-overlay')
@@ -56,6 +61,16 @@ $(document).ready(function(){
 
   $('#venue-fullscreen-icon').click(function() {
     toggleOverlay($('#clinton-center .carousel-inner .active img'));
+  });
+
+  $('#myCarousel').hover(function() {
+    if (!$(document).fullScreen()) {
+        $('#venue-fullscreen-icon').hide().fadeIn('fast');
+    }
+  }, function() {
+    if (!$(document).fullScreen()) {
+        $('#venue-fullscreen-icon').show().fadeOut('fast');
+    }
   });
 
   $('#clinton-center .carousel-inner img').each(function(index, thisImage) {
