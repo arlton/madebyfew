@@ -8037,6 +8037,7 @@ nav#main-nav ul li .current:hover {
 }
 #speakers .speaker p.title {
   margin-top: 5px;
+  margin-bottom: 10px;
   color: #89949B;
   font-weight: 100;
 }
