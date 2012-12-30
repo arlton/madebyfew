@@ -675,6 +675,7 @@ nav#main-nav {
 		}
 		@media (min-width: 768px) and (max-width: 979px) {
 			display: block;
+			margin-left: -20px;
 		}
 		@media (max-device-width: 1024px) and (orientation: landscape) { 
 			display: block;
@@ -689,6 +690,11 @@ nav#main-nav {
 				margin-left: 20px;
 				margin-right: 20px;
 			}
+			h3 {
+				@media (max-width: 480px) {
+					font-size: 26px;
+				}
+			}
 		}
 		.speaker-photo {
 			position:relative;
@@ -696,7 +702,7 @@ nav#main-nav {
 			z-index: 1;
 			margin-top: 50px;
 			@media (max-width: 480px) {
-				margin-top: -420px;
+				margin-top: -390px;
 			}
 			@media (min-width: 768px) and (max-width: 979px) {
 				margin-left: 20px;
@@ -711,7 +717,14 @@ nav#main-nav {
 				margin: 0 auto 40px auto;
 			}
 		}
+		.speaker-secondary {
+			margin-top: 200px;
+			@media (max-width: 480px) {
+				margin-top: 60px;
+			}
+		}
 		.special {
+			margin-top: 260px;
 			margin-left: -20px;
 			@media (max-width: 480px) {
 				margin-top: 40px;
@@ -723,7 +736,7 @@ nav#main-nav {
 }
 
 #last-year-speakers {
-	margin-top: 800px;
+	margin-top: 960px;
 	background-color: #89949B;
 	padding: 50px 0 0 0;
 	@media (max-width: 480px) {
@@ -731,11 +744,11 @@ nav#main-nav {
   }
 	@media (min-width: 768px) and (max-width: 979px) {
 		padding: 40px 0 0 0;
-		margin-top: 580px;
+		margin-top: 620px;
 	}
 	@media (max-device-width: 1024px) and (orientation: landscape) { 
 		padding: 40px 0 0 0;
-		margin-top: 580px;
+		margin-top: 620px;
 	}
 	h2 {
 		font-size: 36px;
@@ -1418,15 +1431,3 @@ footer {
 		}
 	}
 }
-
-// /* Large desktop */
-// @media (min-width: 1200px) { ... }
- 
-// /* Portrait tablet to landscape and desktop */
-// @media (min-width: 768px) and (max-width: 979px) { ... }
- 
-// /* Landscape phone to portrait tablet */
-// @media (max-width: 767px) { ... }
- 
-// /* Landscape phones and down */
-// @media (max-width: 480px) { }

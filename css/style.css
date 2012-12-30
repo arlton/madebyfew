@@ -8164,6 +8164,7 @@ nav#main-nav ul li .current:hover {
 @media (min-width: 768px) and (max-width: 979px) {
   #speakers .speakers-visible-ios {
     display: block;
+    margin-left: -20px;
   }
 }
 @media (max-device-width: 1024px) and (orientation: landscape) {
@@ -8184,6 +8185,11 @@ nav#main-nav ul li .current:hover {
     margin-right: 20px;
   }
 }
+@media (max-width: 480px) {
+  #speakers .speakers-visible-ios .speaker h3 {
+    font-size: 26px;
+  }
+}
 #speakers .speakers-visible-ios .speaker-photo {
   position: relative;
   display: block;
@@ -8192,7 +8198,7 @@ nav#main-nav ul li .current:hover {
 }
 @media (max-width: 480px) {
   #speakers .speakers-visible-ios .speaker-photo {
-    margin-top: -420px;
+    margin-top: -390px;
   }
 }
 @media (min-width: 768px) and (max-width: 979px) {
@@ -8209,7 +8215,16 @@ nav#main-nav ul li .current:hover {
   border: 1px solid #fff;
   margin: 0 auto 40px auto;
 }
+#speakers .speakers-visible-ios .speaker-secondary {
+  margin-top: 200px;
+}
+@media (max-width: 480px) {
+  #speakers .speakers-visible-ios .speaker-secondary {
+    margin-top: 60px;
+  }
+}
 #speakers .speakers-visible-ios .special {
+  margin-top: 260px;
   margin-left: -20px;
 }
 @media (max-width: 480px) {
@@ -8220,7 +8235,7 @@ nav#main-nav ul li .current:hover {
   }
 }
 #last-year-speakers {
-  margin-top: 800px;
+  margin-top: 960px;
   background-color: #89949B;
   padding: 50px 0 0 0;
 }
@@ -8232,13 +8247,13 @@ nav#main-nav ul li .current:hover {
 @media (min-width: 768px) and (max-width: 979px) {
   #last-year-speakers {
     padding: 40px 0 0 0;
-    margin-top: 580px;
+    margin-top: 620px;
   }
 }
 @media (max-device-width: 1024px) and (orientation: landscape) {
   #last-year-speakers {
     padding: 40px 0 0 0;
-    margin-top: 580px;
+    margin-top: 620px;
   }
 }
 #last-year-speakers h2 {
