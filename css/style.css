@@ -8567,12 +8567,23 @@ nav#main-nav ul li .current:hover {
 #schedule ul li span p {
   font-size: 12px;
   margin: 5px 0 0 78px;
+  color: #fff;
 }
 #schedule ul li span p a {
   color: #008fd5;
 }
 #schedule ul li span p a:hover {
   color: #006B9F;
+}
+#schedule ul li:nth-child(2),
+#schedule ul li:nth-child(4),
+#schedule ul li:nth-child(5),
+#schedule ul li:nth-child(6),
+#schedule ul li:nth-child(8),
+#schedule ul li:nth-child(9),
+#schedule ul li:nth-child(10),
+#schedule ul li:nth-child(11) {
+  margin-top: 32px;
 }
 #clinton-center {
   background-color: #000;
