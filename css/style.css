@@ -8067,7 +8067,7 @@ nav#main-nav ul li .current:hover {
   }
 }
 #speakers .speakers-visible-ios {
-  display: block;
+  display: none;
 }
 #speakers .speakers-visible-ios .speaker {
   margin-top: 200px;
@@ -8117,8 +8117,13 @@ nav#main-nav ul li .current:hover {
     margin-right: 20px;
   }
 }
+@media (max-width: 767px) {
+  #speakers .speakers-visible-ios {
+    display: block;
+  }
+}
 #last-year-speakers {
-  margin-top: 800px;
+  margin-top: 1200px;
   background-color: #89949B;
   padding: 50px 0 0 0;
 }
@@ -8127,7 +8132,7 @@ nav#main-nav ul li .current:hover {
     margin-top: 100px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 959px) {
   #last-year-speakers {
     padding: 40px 0 0 0;
     margin-top: 580px;

@@ -622,7 +622,7 @@ nav#main-nav {
 		}
 	}
 	.speakers-visible-ios {
-		display: block;
+		display: none;
 		.speaker {
 			margin-top: 200px;
 			padding: 0 20px 20px 20px;
@@ -663,17 +663,20 @@ nav#main-nav {
 				margin-right: 20px;
 			}
 		}
+        @media (max-width: 767px) {
+            display:block;
+        }
 	}
 }
 
 #last-year-speakers {
-	margin-top: 800px;
+	margin-top: 1200px;
 	background-color: #89949B;
 	padding: 50px 0 0 0;
 	@media (max-width: 767px) {
         margin-top: 100px;
     }
-	@media (min-width: 768px) {
+	@media (min-width: 768px) and (max-width: 959px) {
 		padding: 40px 0 0 0;
 		margin-top: 580px;
 	}
