@@ -10,10 +10,10 @@ $(document).ready(function(){
           ),
           'tablet': (
               winWidth > 480
-              && winWidth <= 720
+              && winWidth <= 768
           ),
           'notebook': (
-              winWidth > 720
+              winWidth > 768
               && winWidth <= 960
           ),
           'desktop': (
@@ -24,10 +24,8 @@ $(document).ready(function(){
     for (var className in deviceConfig) {
         if (deviceConfig[className]) {
             node.addClass(className);
-            console.log('AddingClass', className);
         } else {
             node.removeClass(className);
-            console.log('RemovingClass', className);
         }
     }
   }
