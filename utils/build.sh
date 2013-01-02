@@ -52,6 +52,7 @@ java \
             ../js/jquery.easing.1.3.js \
             ../js/jquery.fitvids.js \
             ../js/jquery.fullscreen.js \
+            ../js/jquery.wipetouch.js \
             ../js/general.js \
     --js_output_file \
             ../dist/js/combined-scripts.js
