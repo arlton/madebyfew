@@ -8596,11 +8596,6 @@ nav#main-nav ul li .current:hover {
   overflow: hidden;
   padding-bottom: 100px;
 }
-@media (max-width: 480px) {
-  #clinton-center {
-    display: none;
-  }
-}
 #clinton-center h2 {
   font-size: 66px;
   font-weight: 600;

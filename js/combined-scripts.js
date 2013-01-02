@@ -10,9 +10,7 @@ function loadScript(url)
    head.appendChild(script);
 }
 
-loadScript('js/bootstrap-modal.js');
-loadScript('js/bootstrap-tooltip.js');
-loadScript('js/bootstrap-carousel.js');
+loadScript('js/bootstrap.js');
 loadScript('js/jquery.scrollTo.min.js');
 loadScript('js/jquery.stellar.js');
 loadScript('js/waypoints.min.js');

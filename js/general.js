@@ -1,8 +1,42 @@
 $(document).ready(function(){
-  /* PRELOAD IMAGES */
   var preloadImageArray = [];
-  // Hires carousel images if carousel if being used (currently when viewport>480px)
-  if ($('#clinton-center').is(':visible')) {
+
+  /* DEVICE SPECIFIC CSS CLASS */
+  function setDeviceClass(node) {
+    var winWidth = $(window).width(),
+        deviceConfig = {
+          'mobile': (
+              winWidth <= 480
+          ),
+          'tablet': (
+              winWidth > 480
+              && winWidth <= 720
+          ),
+          'notebook': (
+              winWidth > 720
+              && winWidth <= 960
+          ),
+          'desktop': (
+              winWidth > 960
+          )
+        };
+
+    for (var className in deviceConfig) {
+        if (deviceConfig[className]) {
+            node.addClass(className);
+            console.log('AddingClass', className);
+        } else {
+            node.removeClass(className);
+            console.log('RemovingClass', className);
+        }
+    }
+  }
+
+  setDeviceClass($('body'));
+
+  /* PRELOAD IMAGES */
+  // Hires carousel images if carousel if being used and we're on a device that would need it
+  if ($('#clinton-center').is(':visible') && $('body').is('.notebook, .desktop')) {
     preloadImageArray.push('img/1_hires.jpg');
     preloadImageArray.push('img/2_hires.jpg');
     preloadImageArray.push('img/3_hires.jpg');
@@ -12,7 +46,6 @@ $(document).ready(function(){
 
   $(preloadImageArray).each(function() {
     $('<img />').attr('src', this).hide().appendTo('body');
-    console.log(this);
   });
 
   function animUp() {
@@ -31,6 +64,16 @@ $(document).ready(function(){
   });
 
   $('.carousel').carousel();
+
+  $('.carousel').wipetouch({
+    wipeLeft: function() {
+      $('.carousel').carousel('prev');
+    },
+    wipeRight: function() {
+      $('.carousel').carousel('next');
+    },
+    tapToClick: false
+  });
 
   function closeOverlay() {
     $('#clinton-center').insertAfter($('#schedule'));
@@ -89,7 +132,8 @@ $(document).ready(function(){
     }
   });
 
-  $('#clinton-center .carousel-inner img').each(function(index, thisImage) {
+  // Toggle overlay when an image is clicked and we're on notebook or desktop sizes
+  $('.notebook #clinton-center .carousel-inner img, .desktop #clinton-center .carousel-inner img').each(function(index, thisImage) {
     $(thisImage).click(function() {
         toggleOverlay(thisImage);
     });
@@ -166,6 +210,9 @@ $(document).ready(function(){
   }
 
   $(window).resize(function() {
+    // Set device class on body
+    setDeviceClass($('body'));
+
     // If we're in overlay mode, make sure that image is vertically centered
     if ($('#venue-overlay').length) {
         $('.carousel-inner').height($(window).height());

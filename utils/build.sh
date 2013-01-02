@@ -43,9 +43,7 @@ java \
     --js \
             ../js/css3-mediaqueries.js \
             ../js/jquery.js \
-            ../js/bootstrap-carousel.js \
-            ../js/bootstrap-modal.js \
-            ../js/bootstrap-tooltip.js \
+            ../js/bootstrap.js \
             ../js/jquery.scrollTo.min.js \
             ../js/jquery.stellar.js \
             ../js/waypoints.min.js \
