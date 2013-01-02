@@ -1,7 +1,7 @@
 $(document).ready(function(){
   /* PRELOAD IMAGES */
   var preloadImageArray = [];
-  // Hires carousel images if carousel if being used (viewport>480px)
+  // Hires carousel images if carousel if being used (currently when viewport>480px)
   if ($('#clinton-center').is(':visible')) {
     preloadImageArray.push('img/1_hires.jpg');
     preloadImageArray.push('img/2_hires.jpg');
