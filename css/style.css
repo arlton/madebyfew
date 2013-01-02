@@ -7367,10 +7367,10 @@ a.badge:hover {
   content: '\e764';
 }
 /* '' */
-.iconnew-facebook-rect-1:before {
-  content: '\e800';
+.iconnew-facebook-rect:before {
+  content: '\f301';
 }
-/* '' */
+/* '' */
 .iconnew-twitter-bird:before {
   content: '\f303';
 }
@@ -7380,9 +7380,13 @@ a.badge:hover {
 }
 /* '' */
 .iconnew-globe:before {
-  content: '𝌍';
+  content: '🌎';
 }
-/* '\1d30d' */
+/* '\1f30e' */
+.iconnew-rocket:before {
+  content: '🚀';
+}
+/* '\1f680' */
 i {
   margin-right: 10px;
 }
@@ -8033,6 +8037,7 @@ nav#main-nav ul li .current:hover {
 }
 #speakers .speaker p.title {
   margin-top: 5px;
+  margin-bottom: 10px;
   color: #89949B;
   font-weight: 100;
 }
@@ -8160,6 +8165,7 @@ nav#main-nav ul li .current:hover {
 @media (min-width: 768px) and (max-width: 979px) {
   #speakers .speakers-visible-ios {
     display: block;
+    margin-left: -20px;
   }
 }
 @media (max-device-width: 1024px) and (orientation: landscape) {
@@ -8180,6 +8186,11 @@ nav#main-nav ul li .current:hover {
     margin-right: 20px;
   }
 }
+@media (max-width: 480px) {
+  #speakers .speakers-visible-ios .speaker h3 {
+    font-size: 26px;
+  }
+}
 #speakers .speakers-visible-ios .speaker-photo {
   position: relative;
   display: block;
@@ -8188,7 +8199,7 @@ nav#main-nav ul li .current:hover {
 }
 @media (max-width: 480px) {
   #speakers .speakers-visible-ios .speaker-photo {
-    margin-top: -420px;
+    margin-top: -390px;
   }
 }
 @media (min-width: 768px) and (max-width: 979px) {
@@ -8205,7 +8216,16 @@ nav#main-nav ul li .current:hover {
   border: 1px solid #fff;
   margin: 0 auto 40px auto;
 }
+#speakers .speakers-visible-ios .speaker-secondary {
+  margin-top: 200px;
+}
+@media (max-width: 480px) {
+  #speakers .speakers-visible-ios .speaker-secondary {
+    margin-top: 60px;
+  }
+}
 #speakers .speakers-visible-ios .special {
+  margin-top: 260px;
   margin-left: -20px;
 }
 @media (max-width: 480px) {
@@ -8216,7 +8236,7 @@ nav#main-nav ul li .current:hover {
   }
 }
 #last-year-speakers {
-  margin-top: 800px;
+  margin-top: 960px;
   background-color: #89949B;
   padding: 50px 0 0 0;
 }
@@ -8228,13 +8248,13 @@ nav#main-nav ul li .current:hover {
 @media (min-width: 768px) and (max-width: 979px) {
   #last-year-speakers {
     padding: 40px 0 0 0;
-    margin-top: 580px;
+    margin-top: 620px;
   }
 }
 @media (max-device-width: 1024px) and (orientation: landscape) {
   #last-year-speakers {
     padding: 40px 0 0 0;
-    margin-top: 580px;
+    margin-top: 620px;
   }
 }
 #last-year-speakers h2 {
@@ -8547,12 +8567,23 @@ nav#main-nav ul li .current:hover {
 #schedule ul li span p {
   font-size: 12px;
   margin: 5px 0 0 78px;
+  color: #fff;
 }
 #schedule ul li span p a {
   color: #008fd5;
 }
 #schedule ul li span p a:hover {
   color: #006B9F;
+}
+#schedule ul li:nth-child(2),
+#schedule ul li:nth-child(4),
+#schedule ul li:nth-child(5),
+#schedule ul li:nth-child(6),
+#schedule ul li:nth-child(8),
+#schedule ul li:nth-child(9),
+#schedule ul li:nth-child(10),
+#schedule ul li:nth-child(11) {
+  margin-top: 32px;
 }
 #clinton-center {
   background-color: #000;
@@ -8616,6 +8647,70 @@ nav#main-nav ul li .current:hover {
   #clinton-center {
     background-image: none;
   }
+}
+#venue-fullscreen-icon {
+  display: none;
+  position: absolute;
+  top: 37%;
+  right: 48%;
+  z-index: 10;
+  cursor: pointer;
+  font-size: 40px;
+  opacity: 0.8;
+}
+#myCarousel:hover #venue-fullscreen-icon {
+  display: block;
+}
+#venue-overlay {
+  z-index: 10000;
+  background-color: #000000;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  cursor: pointer;
+}
+#venue-overlay img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  max-height: none;
+  cursor: pointer;
+}
+#venue-overlay #clinton-center {
+  background-image: none;
+  background-color: #000000;
+}
+#venue-overlay #clinton-center .clinton-center-blurb {
+  border: 0;
+}
+#venue-overlay #clinton-center .carousel-inner {
+  overflow: visible;
+}
+#venue-overlay #clinton-center .container {
+  width: 100%;
+  margin: 0;
+}
+#venue-overlay #clinton-center .span10 {
+  width: 100%;
+}
+#venue-overlay #clinton-center .offset1 {
+  margin-left: 0;
+}
+#venue-overlay #clinton-center h2,
+#venue-overlay #clinton-center h3 {
+  display: none;
+}
+#venue-overlay #clinton-center .carousel-control.left {
+  margin-left: 50px;
+}
+#venue-overlay #clinton-center .carousel-control.right {
+  margin-right: 50px;
+}
+#venue-overlay #myCarousel:hover #venue-fullscreen-icon {
+  display: none;
 }
 #location {
   min-height: 580px;
@@ -8805,7 +8900,7 @@ nav#main-nav ul li .current:hover {
 }
 #sponsors {
   background: #89949B;
-  padding: 110px 0 60px 0;
+  padding: 110px 0 80px 0;
   min-height: 600px;
   text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.6);
 }
@@ -8817,13 +8912,13 @@ nav#main-nav ul li .current:hover {
 }
 @media (min-width: 768px) and (max-width: 979px) {
   #sponsors {
-    padding: 50px 20px 40px 20px;
+    padding: 50px 20px 60px 20px;
     min-height: 420px;
   }
 }
 @media (max-device-width: 1024px) and (orientation: landscape) {
   #sponsors {
-    padding: 50px 20px 40px 20px;
+    padding: 50px 20px 60px 20px;
     min-height: 460px;
   }
 }
