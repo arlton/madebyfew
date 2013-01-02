@@ -1,4 +1,19 @@
 $(document).ready(function(){
+  /* PRELOAD IMAGES */
+  var preloadImageArray = [];
+  // Hires carousel images if carousel if being used (viewport>480px)
+  if ($('#clinton-center').is(':visible')) {
+    preloadImageArray.push('img/1_hires.jpg');
+    preloadImageArray.push('img/2_hires.jpg');
+    preloadImageArray.push('img/3_hires.jpg');
+    preloadImageArray.push('img/4_hires.jpg');
+    preloadImageArray.push('img/5_hires.jpg');
+  }
+
+  $(preloadImageArray).each(function() {
+    $('<img />').attr('src', this).hide().appendTo('body');
+    console.log(this);
+  });
 
   function animUp() {
     $("#marker").animate({ top: "1px" }, "slow", "swing", animDown);
@@ -9,6 +24,7 @@ $(document).ready(function(){
   }
 
   animUp();
+
   /* VENUE */
   $('#clinton-center h2').click(function(){
     $("#clinton-center").animate({height: '900px'});
