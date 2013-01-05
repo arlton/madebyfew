@@ -82,13 +82,13 @@ nav#main-nav {
 	border-bottom: 1px solid #fff;
 	background: #fff;
 	-webkit-box-shadow:  0px 2px 6px 2px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.1);
-  box-shadow:  0px 2px 6px 2px rgba(0, 0, 0, 0.1);
-  z-index: 999;
-  @media (max-width: 480px) {
+    -moz-box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.1);
+    box-shadow:  0px 2px 6px 2px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    @media (max-width: 480px) {
 		padding: 10px 0;
 	}
-	@media (min-width: 768px) and (max-width: 979px) {
+	@media (min-width: 481px) and (max-width: 979px) {
 		padding: 10px 0;
 	}
 	@media (max-device-width: 1024px) and (orientation: landscape) { 
@@ -127,19 +127,12 @@ nav#main-nav {
 		  transition:background-color background-color 0.2s ease-out;
 		  border: 1px solid #fff;
 		  text-shadow: 0px 1px 1px rgba(38, 49, 56, 1);
-		  @media (max-width: 480px) {
+		  @media (max-width: 767px) {
 				margin-bottom: 0;
 				width: 80px;
 				font-size: 12px;
 				margin-left: 20px;
 				margin-top: -4px;
-			}
-			@media (min-width: 768px) and (max-width: 979px) {
-				margin-bottom: 3px;
-
-			}
-			@media (max-device-width: 1024px) and (orientation: landscape) { 
-				margin-bottom: 3px;
 			}
 		}
 		a.register:hover {
@@ -147,43 +140,11 @@ nav#main-nav {
 		  text-decoration: none;
 		}
 	}
-	.nav-info {
-		@media (max-width: 480px) {
-			display: none;
-		}
-		@media (min-width: 768px) and (max-width: 979px) {
-			display: none;
-		}
-		@media (max-device-width: 1024px) and (orientation: landscape) { 
-			display: none;
-		}
-	}
-	.nav-info-ios {
-		display: none;
-		@media (max-width: 480px) {
-			display: block;
-			width: 300px;
-		}
-		@media (min-width: 768px) and (max-width: 979px) {
-			display: block;
-			width: 500px;
-		}
-		@media (max-device-width: 1024px) and (orientation: landscape) { 
-			display: block;
-			width: 500px;
-		}
-	}
 	ul {
 		margin-left: 30px;
 		margin-top: 10px;
 		overflow: hidden;
-		@media (max-width: 480px) {
-			display: none;
-		}
-		@media (min-width: 768px) and (max-width: 979px) {
-			display: none;
-		}
-		@media (max-device-width: 1024px) and (orientation: landscape) { 
+		@media (max-width: 959px) {
 			display: none;
 		}
 		li {
@@ -266,12 +227,16 @@ nav#main-nav {
 			font-size: 13px;
 			padding: 0 20px;
 		}
-		@media (min-width: 768px) and (max-width: 979px) {
+		@media (min-width: 481px) and (max-width: 979px) {
 			font-size: 17px;
 		}
 		@media (max-device-width: 1024px) and (orientation: landscape) { 
 			font-size: 17px;
 		}
+        &.about {
+            max-width:500px;
+            padding:0 20px;
+        }
 	}
 	a {
 	  background-color:#008fd5;
