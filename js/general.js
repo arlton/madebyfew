@@ -70,7 +70,8 @@ $(document).ready(function(){
     wipeRight: function() {
       $('.carousel').carousel('prev');
     },
-    tapToClick: true
+    tapToClick: true,
+    preventDefault: false
   });
 
   function closeOverlay() {
