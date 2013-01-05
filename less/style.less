@@ -784,10 +784,11 @@ nav#main-nav {
 		margin-right: auto;
 		margin-left: auto;
 		width: 80%;	
-		@media (max-width: 480px) {
+        display:none;
+		@media (max-width: 767px) {
 			display: none;
 		}
-		@media (min-width: 767px) and (max-width: 979px) {
+		@media (min-width: 768px) and (max-width: 979px) {
 			display: none;
 		}
 		@media (max-device-width: 1024px) and (orientation: landscape) { 
@@ -885,7 +886,15 @@ nav#main-nav {
 		color: #fff;
 		border-bottom: 1px solid #89949B;
 	}
-	ul {
+    p {
+        font-size: 12px;
+        margin: 5px 0 0 78px;
+        color: #fff;
+    }
+    a {
+        color: #008fd5;
+    }
+    ul {
 		@media (max-width: 767px) {
 			margin-bottom: 40px;
 		}
@@ -925,16 +934,16 @@ nav#main-nav {
 				}
 			}
 		}
-		// li:nth-child(2),
-		// li:nth-child(4),
-		// li:nth-child(5),
-		// li:nth-child(6),
-		// li:nth-child(8),
-		// li:nth-child(9),
-		// li:nth-child(10),
-		// li:nth-child(11) {
-		// 	margin-top: 32px;
-		// } 
+		li:nth-child(2),
+		li:nth-child(4),
+		li:nth-child(5),
+		li:nth-child(6),
+		li:nth-child(8),
+		li:nth-child(9),
+		li:nth-child(10),
+		li:nth-child(11) {
+			margin-top: 32px;
+		} 
 	}
 }
 
@@ -995,10 +1004,12 @@ nav#main-nav {
 #venue-fullscreen-icon {
     display:none;
     position:absolute;
-    top:40%;
-    right:50%;
+    top:37%;
+    right:48%;
     z-index:10;
     cursor:pointer;
+    font-size:40px;
+    opacity:0.8;
 }
 
 #myCarousel:hover #venue-fullscreen-icon {
