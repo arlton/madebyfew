@@ -65,17 +65,17 @@ $(document).ready(function(){
 
   $('.carousel').wipetouch({
     wipeLeft: function() {
-      $('.carousel').carousel('prev');
-    },
-    wipeRight: function() {
       $('.carousel').carousel('next');
     },
-    tapToClick: false
+    wipeRight: function() {
+      $('.carousel').carousel('prev');
+    },
+    tapToClick: true
   });
 
   function closeOverlay() {
     $('#clinton-center').insertAfter($('#schedule'));
-    $('#clinton-center .item img').each(function(index, thisImage) {
+    $('.tablet #clinton-center .item img, .notebook #clinton-center .item img, .desktop #clinton-center .item img').each(function(index, thisImage) {
         $(thisImage).attr('src', $(thisImage).attr('data-lowres-src'));
     });
 
@@ -87,7 +87,8 @@ $(document).ready(function(){
 
   function toggleOverlay(thisImage) {
     // If already open, then close
-    if ($(document).fullScreen()) {
+    alert($(document).fullScreen());
+    if ($("#venue-overlay").length) {
         closeOverlay();
     } else {
         // Hide venue fullscreen icon
@@ -99,7 +100,7 @@ $(document).ready(function(){
              .prependTo('body');
 
         $('#clinton-center').appendTo(overlay);
-        $('#clinton-center .item img').each(function(index, thisImage) {
+        $('.tablet #clinton-center .item img, .notebook #clinton-center .item img, .desktop #clinton-center .item img').each(function(index, thisImage) {
             $(thisImage).attr('src', $(thisImage).attr('data-hires-src'));
         });
 
@@ -130,8 +131,8 @@ $(document).ready(function(){
     }
   });
 
-  // Toggle overlay when an image is clicked and we're on notebook or desktop sizes
-  $('.notebook #clinton-center .carousel-inner img, .desktop #clinton-center .carousel-inner img').each(function(index, thisImage) {
+  // Toggle overlay when an image is clicked
+  $('#clinton-center .carousel-inner img').each(function(index, thisImage) {
     $(thisImage).click(function() {
         toggleOverlay(thisImage);
     });
@@ -219,7 +220,6 @@ $(document).ready(function(){
     // If we've resized to above 960 and stellar hasn't been instantiated, do so now
     if ($(window).width() >= 960 &&
         typeof $(window).data('plugin_stellar') === 'undefined') {
-        console.log('Instantiating stellar after resize');
         $(window).stellar();
     }
 
