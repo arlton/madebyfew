@@ -87,7 +87,6 @@ $(document).ready(function(){
 
   function toggleOverlay(thisImage) {
     // If already open, then close
-    alert($(document).fullScreen());
     if ($("#venue-overlay").length) {
         closeOverlay();
     } else {
@@ -100,11 +99,13 @@ $(document).ready(function(){
              .prependTo('body');
 
         $('#clinton-center').appendTo(overlay);
-        $('.tablet #clinton-center .item img, .notebook #clinton-center .item img, .desktop #clinton-center .item img').each(function(index, thisImage) {
+        $('.tablet #clinton-center .item img, .notebook #clinton-center .item img,'
+            + ' .desktop #clinton-center .item img').each(function(index, thisImage) {
             $(thisImage).attr('src', $(thisImage).attr('data-hires-src'));
         });
 
         // Fullscreen using bad ass jQuery fullscreen plugin
+        // FIXME: Needs to force landscape on smartphones and tablets for extra sexytime
         $(overlay).fullScreen(true);
     }
   }
@@ -156,7 +157,6 @@ $(document).ready(function(){
 
   sections.waypoint({
     handler: function(event, direction) {
-
       var active_section;
       active_section = $(this);
       if (direction === "up") {
