@@ -8288,13 +8288,14 @@ nav#main-nav ul li .current:hover {
   margin-right: auto;
   margin-left: auto;
   width: 80%;
+  display: none;
 }
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   #last-year-speakers hr {
     display: none;
   }
 }
-@media (min-width: 767px) and (max-width: 979px) {
+@media (min-width: 768px) and (max-width: 979px) {
   #last-year-speakers hr {
     display: none;
   }
@@ -8417,6 +8418,14 @@ nav#main-nav ul li .current:hover {
   color: #fff;
   border-bottom: 1px solid #89949B;
 }
+#schedule p {
+  font-size: 12px;
+  margin: 5px 0 0 78px;
+  color: #fff;
+}
+#schedule a {
+  color: #008fd5;
+}
 @media (max-width: 767px) {
   #schedule ul {
     margin-bottom: 40px;
@@ -8459,6 +8468,16 @@ nav#main-nav ul li .current:hover {
 }
 #schedule ul li span p a:hover {
   color: #006B9F;
+}
+#schedule ul li:nth-child(2),
+#schedule ul li:nth-child(4),
+#schedule ul li:nth-child(5),
+#schedule ul li:nth-child(6),
+#schedule ul li:nth-child(8),
+#schedule ul li:nth-child(9),
+#schedule ul li:nth-child(10),
+#schedule ul li:nth-child(11) {
+  margin-top: 32px;
 }
 #clinton-center {
   background-color: #000;
@@ -8531,10 +8550,12 @@ nav#main-nav ul li .current:hover {
 #venue-fullscreen-icon {
   display: none;
   position: absolute;
-  top: 40%;
-  right: 50%;
+  top: 37%;
+  right: 48%;
   z-index: 10;
   cursor: pointer;
+  font-size: 40px;
+  opacity: 0.8;
 }
 #myCarousel:hover #venue-fullscreen-icon {
   display: block;
