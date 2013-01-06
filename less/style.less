@@ -634,6 +634,11 @@ nav#main-nav {
 				margin-left: 20px;
 				margin-right: 20px;
 			}
+			h3 {
+				@media (max-width: 480px) {
+					font-size: 24px;
+				}
+			}
 		}
 		.speaker-photo {
 			position:relative;
@@ -641,7 +646,7 @@ nav#main-nav {
 			z-index: 1;
 			margin-top: 50px;
 			@media (max-width: 767px) {
-				margin-top: -420px;
+				margin-top: -380px;
 			}
 			@media (min-width: 768px) and (max-width: 979px) {
 				margin-left: 20px;
@@ -738,9 +743,19 @@ nav#main-nav {
 		font-weight: 100;
 		background-color: #273138;
 		display: block;
-		margin: 0 auto;
+		margin: -30px auto 0 auto;
+		@media (max-width: 480px) {
+			margin-top: 0;
+		}
 		@media (max-width: 767px) {
 			font-size: 12px;
+			margin-top: 0;
+		}
+		@media (max-width: 979px) {
+			margin-top: 0;
+		}
+		@media (max-device-width: 1024px) and (orientation: landscape) { 
+			margin-top: 0;
 		}
 		a {
 			color: #fff;
@@ -799,6 +814,7 @@ nav#main-nav {
 		background-color: #fff;
 		padding: 80px 0 100px 0;
 		margin-top: 100px;
+		margin-bottom: -20px;
 		text-align: center;
 		-webkit-box-shadow:  0px 0px 6px 4px rgba(0, 0, 0, 0.3);
         -moz-box-shadow: 0 0px 6px 4px rgba(0, 0, 0, 0.3);
@@ -959,16 +975,19 @@ nav#main-nav {
     overflow: hidden;
     padding-bottom: 100px;
     h2 {
-		font-size: 66px;
-		font-weight: 600;
-		margin: 40px 0 50px 0;
-		font-style: italic;
-		text-align: center;
-		color: #fff;
-		text-shadow: 0px 2px 2px #000;
-		@media (min-width: 768px) and (max-width: 979px) {
-			font-size: 56px;
-		}
+			font-size: 66px;
+			font-weight: 600;
+			margin: 40px 0 50px 0;
+			font-style: italic;
+			text-align: center;
+			color: #fff;
+			text-shadow: 0px 2px 2px #000;
+			@media (max-width: 480px) {
+				font-size: 36px;
+			}
+			@media (min-width: 768px) and (max-width: 979px) {
+				font-size: 56px;
+			}
 	}
 	.clinton-center-blurb {
 		background: #fff;
@@ -985,6 +1004,9 @@ nav#main-nav {
 			text-align: center;
 			margin: 20px 0;
 			padding: 20px 0;
+			@media (max-width: 480px) {
+				font-size: 16px;
+			}
 			@media (min-width: 768px) and (max-width: 979px) {
 				// font-size: 16px;
 			}
