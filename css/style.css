@@ -8230,13 +8230,13 @@ nav#main-nav ul li .current:hover {
 }
 @media (max-width: 480px) {
   #speakers .speakers-visible-ios .special {
-    margin-top: 40px;
+    margin-top: 110px;
     margin-left: 20px;
     margin-right: 20px;
   }
 }
 #last-year-speakers {
-  margin-top: 1340px;
+  margin-top: 1640px;
   background-color: #89949B;
   padding: 50px 0 0 0;
 }
