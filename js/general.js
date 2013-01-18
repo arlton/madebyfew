@@ -46,6 +46,7 @@ $(document).ready(function(){
     $('<img />').attr('src', this).hide().appendTo('body');
   });
 
+  /* MAP MARKER ANIMATION */
   function animUp() {
     $("#marker").animate({ top: "1px" }, "slow", "swing", animDown);
   }
@@ -56,7 +57,7 @@ $(document).ready(function(){
 
   animUp();
 
-  /* VENUE */
+  /* VENUE & CAROUSEL */
   $('#clinton-center h2').click(function(){
     $("#clinton-center").animate({height: '900px'});
   });
@@ -172,7 +173,9 @@ $(document).ready(function(){
     offset: '25%'
   });
 
+  /* ALL SCROLLING EVENTS */
   $(window).scroll( function(){
+    /* QUOTES */
     if($(window).scrollTop()>100){
         $(".quote1").fadeIn();
     }
@@ -192,12 +195,22 @@ $(document).ready(function(){
     if($(window).scrollTop()>1150){
         $(".speaker-holder").fadeIn();
     }
+
+    /* MOBILE NAVIGATION TRICKY TRICKY TRICKY TRICKY */
+    if ($('body').is('.mobile, .tablet')) {
+        // Show navigation for a moment, then scroll it almost all the way up
+        setTimeout(function() {
+            $("#main-nav").animate({ top: "-52px" }, "slow", "swing");
+        }, 100);
+    }
   });
 
+  /* VIDEOS */
   $(".last-year-speaker").fitVids();
 
+  /* STELLAR */
   // If we're at the right window size, instantiate stellar
-  if ($(window).width() >= 960) {
+  if ($('body').is('.notebook, .desktop')) {
     $(window).stellar({
         hideDistantElements: true,
         showElement: function($elem) {
@@ -209,6 +222,7 @@ $(document).ready(function(){
     });
   }
 
+  /* ALL WINDOW RESIZE EVENTS */
   $(window).resize(function() {
     // Set device class on body
     setDeviceClass($('body'));
@@ -219,13 +233,13 @@ $(document).ready(function(){
     }
 
     // If we've resized to above 960 and stellar hasn't been instantiated, do so now
-    if ($(window).width() >= 960 &&
+    if ($('body').is('.notebook, .desktop') &&
         typeof $(window).data('plugin_stellar') === 'undefined') {
         $(window).stellar();
     }
 
     // Assuming we're rolling with stellar based on screen width
-    if ($(window).width() >= 960) {
+    if ($('body').is('.notebook, .desktop')) {
         winHeight = $(window).height();
         $("#scrollWrapper > div").height(winHeight);
 
@@ -265,4 +279,16 @@ $(document).ready(function(){
     }, 'json').error(function() { // If this xhr call dies for some reason, show at least something
         $('#tickets_msg').html('Seating is limited. The event will sell out.');
     });
+
+    /* MOBILE NAVIGATION */
+    if ($('body').is('.mobile, .tablet')) {
+        // Show navigation for a moment, then scroll it almost all the way up
+        setTimeout(function() {
+            $("#main-nav").animate({ top: "-52px" }, "slow", "swing");
+        }, 1000);
+
+        $("#main-nav").click(function() {
+            $("#main-nav").animate({ top: "0" }, "fast", "swing");
+        });
+    }
 });
