@@ -8236,7 +8236,7 @@ nav#main-nav ul li .current:hover {
   }
 }
 #last-year-speakers {
-  margin-top: 1640px;
+  margin-top: 1720px;
   background-color: #89949B;
   padding: 50px 0 0 0;
 }
@@ -8248,7 +8248,7 @@ nav#main-nav ul li .current:hover {
 @media (min-width: 768px) and (max-width: 979px) {
   #last-year-speakers {
     padding: 40px 0 0 0;
-    margin-top: 620px;
+    margin-top: 160px;
   }
 }
 @media (max-device-width: 1024px) and (orientation: landscape) {
